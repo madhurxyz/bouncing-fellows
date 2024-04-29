@@ -2,13 +2,20 @@
     "version": 2,
     "builds": [
         {
-            "src": "package.json",
+            "src": "index.html",
             "use": "@vercel/static-build"
-        }
-    ],
-    "routes": [
+        },
         {
-            "handle": "filesystem"
+            "src": "script.js",
+            "use": "@vercel/static-build"
+        },
+        {
+            "src": "styles.css",
+            "use": "@vercel/static-build"
+        },
+        {
+            "src": "images/**/*",
+            "use": "@vercel/static-build"
         }
     ]
 }
